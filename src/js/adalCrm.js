@@ -31,7 +31,7 @@ function get365(next) {
   return new DynamicsWebApi({
     webApiUrl,
     onTokenRefresh: callback => {
-      let context = new adalNode.AuthenticationContext(accessTokenUrl);
+      const context = new adalNode.AuthenticationContext(accessTokenUrl);
 
       context.acquireTokenWithUsernamePassword(
         crmUrl,
